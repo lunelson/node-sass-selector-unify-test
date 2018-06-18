@@ -11,11 +11,13 @@
   }
 }
 
-// NB the following works; so this seems to be a problem with running a function inside of the selector-unify function
+// this version also causes a crash
 
 // [class^="a-"], [class*=" a-"] {
 //   color: blue;
-//   @at-root #{selector-unify(&, selector-parse('[class^="b-"], [class*=" b-"]'))} {
-//     color: red;
+//   & > * {
+//     @at-root #{selector-unify(&, selector-parse('[class^="b-"], [class*=" b-"]'))} {
+//       color: red;
+//     }
 //   }
 // }
