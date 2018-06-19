@@ -1,3 +1,3 @@
 # node-sass-selector-unify-test
 
-This is a test case for [node-sass issue 2420](https://github.com/sass/node-sass/issues/2420).
+This is a test case for [this comment on libsass issue 2633](https://github.com/sass/libsass/issues/2633#issuecomment-398315781).
