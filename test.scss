@@ -1,22 +1,20 @@
-@function base-class($base) {
-  @return selector-parse('[class^="#{$base}-"], [class*=" #{$base}-"]');
-}
+// TEST A: causes wrong output in libsass
 
-#{base-class('a')} {
+.a {
   color: blue;
   & > * {
-    @at-root #{selector-unify(&, base-class('b'))} {
+    @at-root #{selector-unify(&, '.b')} {
       color: red;
     }
   }
 }
 
-// this version also causes a crash
+// TEST B: causes libsass crash
 
-// [class^="a-"], [class*=" a-"] {
+// .a, .b {
 //   color: blue;
 //   & > * {
-//     @at-root #{selector-unify(&, selector-parse('[class^="b-"], [class*=" b-"]'))} {
+//     @at-root #{selector-unify(&, '.c, .d')} {
 //       color: red;
 //     }
 //   }

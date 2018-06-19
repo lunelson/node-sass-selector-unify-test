@@ -1,0 +1,23 @@
+// @function base-class($base) {
+//   @return selector-parse('[class^="#{$base}-"], [class*=" #{$base}-"]');
+// }
+
+// #{base-class('a')} {
+//   color: blue;
+//   & > * {
+//     @at-root #{selector-unify(&, base-class('b'))} {
+//       color: red;
+//     }
+//   }
+// }
+
+// this version also causes a crash
+
+// [class^="a-"], [class*=" a-"] {
+//   color: blue;
+//   & > * {
+//     @at-root #{selector-unify(&, selector-parse('[class^="b-"], [class*=" b-"]'))} {
+//       color: red;
+//     }
+//   }
+// }
