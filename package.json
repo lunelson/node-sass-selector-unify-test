@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node-sass --output-style=expanded test.scss test.css"
+    "test": "node-sass --output-style=expanded test.scss test.css",
+    "test-crash": "node-sass --output-style=expanded crash.scss crash.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.12.0"
   }
 }
