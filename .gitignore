@@ -72,3 +72,4 @@ typings/
 # Serverless directories
 .serverless
 /test.css
+/crash.css

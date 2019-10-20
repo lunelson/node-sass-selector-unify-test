@@ -9,13 +9,3 @@
   }
 }
 
-// TEST B: causes libsass crash
-
-// .a, .b {
-//   color: blue;
-//   & > * {
-//     @at-root #{selector-unify(&, '.c, .d')} {
-//       color: red;
-//     }
-//   }
-// }
